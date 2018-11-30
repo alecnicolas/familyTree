@@ -1,3 +1,3 @@
-### familyTree
+## Family Tree
 
-Simple family tree program written in PROLOG.
+Simple family tree of my immediate family written in PROLOG.
