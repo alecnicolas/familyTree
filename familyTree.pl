@@ -1,9 +1,3 @@
-%Alec Marcum
-%Comp 333
-%Project 3
-
-%Problem 1
-%facts
 male(alec).
 male(brandon).
 male(dean).
@@ -52,8 +46,7 @@ aunt(X,Y):-female(X),parent(Z,Y),siblings(X,Z).
 uncle(X,Y):-male(X),parent(Z,Y),siblings(X,Z).
 firstcousins(X,Y):-child(X,Z),siblings(Z,Q),child(Y,Q).
 
-%Problem 2
-%Queries
+%Sample Queries
 %setof(A,siblings(A,cristina2),L).
 %setof(A,firstcousins(A,alec),L).
 %setof(X, aunt(X, alec),A),setof(Y, uncle(Y,alec),U),append(A,U,L).
@@ -61,24 +54,3 @@ firstcousins(X,Y):-child(X,Z),siblings(Z,Q),child(Y,Q).
 %setof(A,parent(cristina1,A),L).
 %setof(A,ancestor(A,alec),L).
 %setof(A,descendent(A,eddie),L).
-
-%Problem 3
-likes(sue, books).
-likes(sue, music).
-likes(john, music).
-likes(joan, books).
-likes(steven, art).
-likes(nancy, music).
-likes(nancy, art).
-likes(cindy, movies).
-likes(john, books).
-likes(nancy, yoga).
-likes(cindy, art).
-likes(cynthia, yoga).
-likes(tim, art).
-sharedInterests(X,Y,Z):-likes(Y,Z),not(X=Y).
-moreThanOneInterest(X):-likes(X,A),likes(X,B),not(A=B).
-
-%Problem 4
-popular(Z,N):-setof(A, likes(A,Z),L),length(L,N).
-popular(Z,N):-N>0,I is N-1,popular(Z,I).
