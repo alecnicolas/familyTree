@@ -1,3 +1,4 @@
+%facts
 male(alec).
 male(brandon).
 male(dean).
@@ -47,10 +48,10 @@ uncle(X,Y):-male(X),parent(Z,Y),siblings(X,Z).
 firstcousins(X,Y):-child(X,Z),siblings(Z,Q),child(Y,Q).
 
 %Sample Queries
-%setof(A,siblings(A,cristina2),L).
-%setof(A,firstcousins(A,alec),L).
-%setof(X, aunt(X, alec),A),setof(Y, uncle(Y,alec),U),append(A,U,L).
-%setof(A,siblings(A,alec),L).
-%setof(A,parent(cristina1,A),L).
-%setof(A,ancestor(A,alec),L).
-%setof(A,descendent(A,eddie),L).
+% setof(A,siblings(A,cristina2),L).
+% setof(A,firstcousins(A,alec),L).
+% setof(X, aunt(X, alec),A),setof(Y, uncle(Y,alec),U),append(A,U,L).
+% setof(A,siblings(A,alec),L).
+% setof(A,parent(cristina1,A),L).
+% setof(A,ancestor(A,alec),L).
+% setof(A,descendent(A,eddie),L).
